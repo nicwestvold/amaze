@@ -18,6 +18,11 @@ describe('getPrimes', () => {
 			n: null,
 			expected: [],
 		},
+		{
+			description: 'should return first 4 primes',
+			n: 4,
+			expected: [2, 3, 5, 7],
+		},
 	];
 	cases.forEach((t) => {
 		it(t.description, () => {
