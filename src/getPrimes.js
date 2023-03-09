@@ -9,9 +9,7 @@ export const getPrimes = (count) => {
 	let stop = findN(count);
 	const sieve = populateSieve(start, stop);
 
-	let i = 0;
-
-	while (count > primes.length && i < 4) {
+	while (count > primes.length) {
 		sieveOfEratosthenes(start, stop, count, sieve, primes);
 		if (count > primes.length) {
 			const diff = stop - start;
@@ -20,7 +18,6 @@ export const getPrimes = (count) => {
 			populateSieve(start, stop, sieve);
 			markSieve(stop, sieve, primes);
 		}
-		i++;
 	}
 
 	return primes.slice(0, count);
