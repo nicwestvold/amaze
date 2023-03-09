@@ -12,7 +12,7 @@ export const getPrimes = (count) => {
 	while (count > primes.length) {
 		sieveOfEratosthenes(start, stop, count, sieve, primes);
 		if (count > primes.length) {
-			const diff = stop - start;
+			let diff = Math.ceil((stop - start) / 2);
 			start = stop + 1;
 			stop = start + diff;
 			populateSieve(start, stop, sieve);
