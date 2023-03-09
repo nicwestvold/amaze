@@ -19,6 +19,11 @@ describe('getPrimes', () => {
 			expected: [],
 		},
 		{
+			description: 'should return first prime number',
+			n: 1,
+			expected: [2],
+		},
+		{
 			description: 'should return first 4 primes',
 			n: 4,
 			expected: [2, 3, 5, 7],

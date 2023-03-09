@@ -45,6 +45,9 @@ function sieveOfEratosthenes(start, stop, count, sieve, primes) {
  * Encapsulates the logic of finding an appropriate `n`
  */
 function findN(count) {
+	if (count <= 4) {
+		return count * 2;
+	}
 	return Math.ceil(count * Math.log(count));
 }
 
